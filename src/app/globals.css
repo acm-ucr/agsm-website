@@ -5,11 +5,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-agsm-blue-100: #C5D1E3;
-  --color-agsm-blue-200: #023DA5;
-  --color-agsm-blue-300: #7F90A7;
-  --color-agsm-yellow-100: #FFF6E6B2;
-  --color-agsm-yellow-200: #E1A527;
+  --color-agsm-blue-100: #c5d1e3;
+  --color-agsm-blue-200: #023da5;
+  --color-agsm-blue-300: #7f90a7;
+  --color-agsm-yellow-100: #fff6e6b2;
+  --color-agsm-yellow-200: #e1a527;
 
   --font-agsm-main: "Cabin", serif;
 }

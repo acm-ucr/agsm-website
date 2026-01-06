@@ -1,6 +1,6 @@
 # AGSM Website
 
-The A. Gary Anderson Graduate School of Management (AGSM) Product Club strives to be the leading community for students aspiring to become successful product managers, providing them with the necessary resources, skills, and experience to launch their careers in the tech industry. 
+The A. Gary Anderson Graduate School of Management (AGSM) Product Club strives to be the leading community for students aspiring to become successful product managers, providing them with the necessary resources, skills, and experience to launch their careers in the tech industry.
 
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23407ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)

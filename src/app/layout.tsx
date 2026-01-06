@@ -21,8 +21,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body className={cabin.className}>
-        <ReactQueryClientProvider>{children}
-        </ReactQueryClientProvider>
+        <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
       </body>
     </html>
   );
