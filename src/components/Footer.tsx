@@ -39,12 +39,12 @@ const Footer = () => {
               <IoIosMail className="size-9 text-white" />
             </Link>
             <Link
-              href="https://www.linkedin.com/company/ucrbusiness/"
+              href="https://www.linkedin.com/school/university-of-california-riverside---a.-gary-anderson-graduate-school-of-management/"
               target="_blank"
             >
               <FaLinkedin className="mt-1 size-7 text-white" />
             </Link>
-            <Link href="https://www.instagram.com/ucrbusiness" target="_blank">
+            <Link href="https://www.instagram.com/ucragsm/" target="_blank">
               <BiLogoInstagramAlt className="mt-0.5 size-8 text-white" />
             </Link>
             <Link
