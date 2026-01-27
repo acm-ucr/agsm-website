@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Cabin } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
+// import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const cabin = Cabin({
   subsets: ["latin"],
@@ -21,7 +23,11 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body className={cabin.className}>
-        <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
+        <ReactQueryClientProvider>
+          {/* <Navbar /> */}
+          {children}
+          <Footer />
+        </ReactQueryClientProvider>
       </body>
     </html>
   );
