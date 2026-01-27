@@ -1,7 +1,7 @@
-// const Board = () => {
-//   return (
+const Board = () => {
+  return (
+    <div>Hello World</div>
+  );
+};
 
-//   );
-// };
-
-// export default Board;
+export default Board;
