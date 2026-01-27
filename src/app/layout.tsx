@@ -27,7 +27,7 @@ export default function RootLayout({ children }: LayoutProps) {
           {/* <Navbar /> */}
           {children}
           <Footer />
-          </ReactQueryClientProvider>
+        </ReactQueryClientProvider>
       </body>
     </html>
   );
