@@ -16,12 +16,12 @@ const Header = ({ text }: HeaderProps) => {
             objectFit="cover"
             className="absolute z-0 h-full w-full"
           />
-          <div className="text-agsm-blue-200 z-20 w-3/5 py-12 text-[105px]">
+          <div className="text-agsm-blue-200 z-20 w-3/5 py-12 text-9xl">
             {text}
           </div>
         </div>
       </div>
-      <div className="border-agsm-blue-200 w-full border-1"></div>
+      <div className="border-agsm-blue-200 w-full border-1" />
     </div>
   );
 };
