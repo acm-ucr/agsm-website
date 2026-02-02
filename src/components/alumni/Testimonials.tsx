@@ -1,4 +1,4 @@
-const Testimonials = (props: {}) => {
+const Testimonials = () => {
   return (
     <div className="flex w-full flex-col gap-8">
       <div className="to-agsm-blue-100 bg-gradient-to-r from-white p-4">
