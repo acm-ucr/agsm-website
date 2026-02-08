@@ -2,24 +2,22 @@ import Image from "next/image";
 import AboutUsIm from "@/public/about_us.webp";
 import Logo from "@/public/logo.webp";
 
-interface AboutUsProps {
-  title: string;
-  description: string;
-  title2: string;
-}
-
-const AboutUs = ({ title, description, title2 }: AboutUsProps) => {
+const AboutUs = () => {
   return (
-    <div className="mt-3 flex w-screen flex-col items-center gap-20 p-8">
-      <h1 className="text-agsm-blue-200 text-7xl font-bold">{title}</h1>
-      <div className="items-top flex w-4/5 flex-row justify-center gap-x-20 text-left">
-        <div className="flex w-3/7 flex-col items-center gap-15">
-          <h2 className="text-agsm-blue-200 mt-20 w-12/11 gap-20 p-2 text-5xl">
-            {title2}
-          </h2>
-          <p className="w-12/11 pr-20 text-2xl">{description}</p>
+    <div className="mt-3 flex w-full flex-col items-center gap-18 p-5">
+      <h1 className="text-agsm-blue-200 text-[50px] font-bold">{"ABOUT US"}</h1>
+      <div className="items-top flex w-4/5 flex-row justify-center gap-x-15 text-left">
+        <div className="flex w-3/5 flex-col items-center gap-15">
+          <p className="text-agsm-blue-200 mt-7 p-2 text-4xl font-bold">
+            {"Launching the Next Generation of Product Leaders"}
+          </p>
+          <p className="w-full pr-20 text-xl">
+            {
+              "Whether you're exploring PM roles for the first time or preparing for your dream teach internship, we provide the resources, hands-on experience, and network you need to succeed. From curated learning materials to case competitions and alumni mentorship, we're building the pathway from zero experience to product leadership."
+            }
+          </p>
         </div>
-        <div className="h-7/6 w-1/3 overflow-hidden rounded-lg">
+        <div className="h-[450px] w-1/2 overflow-hidden rounded-lg">
           <Image
             src={AboutUsIm}
             alt="Students and faculty members in a meeting"
@@ -29,7 +27,7 @@ const AboutUs = ({ title, description, title2 }: AboutUsProps) => {
             <Image
               src={Logo}
               alt="AGSM Logo"
-              className="absolute bottom-30 left-360 size-55"
+              className="absolute right-30 bottom-13 size-40"
             />
           </div>
         </div>
