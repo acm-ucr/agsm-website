@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import LandingTop from "@/public/landing_top_gradient.png";
-import HeaderBgLeft from "@/public/landing_rectangles_left.png";
-import HeaderBgRight from "@/public/landing_rectangles_right.png";
+import LandingTop from "@/public/landing_top_gradient.webp";
+import HeaderBgLeft from "@/public/landing_rectangles_left.webp";
+import HeaderBgRight from "@/public/landing_rectangles_right.webp";
 import Link from "next/link";
 
 const Landing = () => {
