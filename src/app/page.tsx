@@ -1,5 +1,3 @@
-"use client";
-
 import AboutUs from "@/components/landing/AboutUs";
 
 const Home = () => {
