@@ -9,19 +9,20 @@ interface BoardProps {
 const Card = ({ name, role, image }: BoardProps) => {
   return (
     <div className="flex flex-col items-center">
-      <div className="bg-agsm-yellow-100 p-6 pb-10 rounded-sm">
-        <div className="relative w-[220px] h-[220px]">
+      <div className="bg-agsm-yellow-100 rounded-sm p-6 pb-10">
+        <div className="relative h-[220px] w-[220px]">
           <Image
             src={image}
             alt={`Photo of ${name}`}
-            fill
-            className="object-cover rounded-sm"
+            width={300}
+            height={300}
+            className="rounded-sm object-cover"
           />
         </div>
       </div>
       <div className="mt-6 text-center">
-        <p className="text-[#1F4E8C] text-xl font-semibold">{name}</p>
-        <p className="text-[#1F4E8C] text-sm">{role}</p>
+        <p className="text-xl font-semibold text-[#1F4E8C]">{name}</p>
+        <p className="text-sm text-[#1F4E8C]">{role}</p>
       </div>
     </div>
   );
