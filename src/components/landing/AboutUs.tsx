@@ -4,7 +4,7 @@ import Logo from "@/public/logo.webp";
 
 const AboutUs = () => {
   return (
-    <div className="mt-3 flex w-full flex-col items-center gap-18 p-5">
+    <div className="flex w-full flex-col items-center gap-18 p-5">
       <p className="text-agsm-blue-200 text-6xl font-bold">ABOUT US</p>
       <div className="items-top flex w-4/5 flex-row justify-center gap-x-15 text-left">
         <div className="flex w-3/5 flex-col items-center gap-15">
@@ -19,18 +19,14 @@ const AboutUs = () => {
             the pathway from zero experience to product leadership.
           </p>
         </div>
-        <div className="h-4/3 w-1/2 overflow-hidden rounded-lg">
+        <div className="w-1/2 rounded-lg">
           <Image
             src={AboutUsIm}
             alt="Students and faculty members in a meeting"
             className="h-full w-full items-center object-cover"
           />
-          <div className="">
-            <Image
-              src={Logo}
-              alt="AGSM Logo"
-              className="absolute right-30 bottom-13 size-40"
-            />
+          <div className="absolute right-20 size-40">
+            <Image src={Logo} alt="AGSM Logo" className="absolute bottom-20" />
           </div>
         </div>
       </div>
