@@ -7,11 +7,11 @@ import {
   CarouselApi,
   CarouselItem,
 } from "@/components/ui/carousel";
-import Image1 from "@/public/carousal/1.png";
-import Image2 from "@/public/carousal/2.png";
-import Image3 from "@/public/carousal/3.png";
-import Image4 from "@/public/carousal/4.png";
-import Image5 from "@/public/carousal/5.png";
+import Image1 from "@/public/carousal/1.webp";
+import Image2 from "@/public/carousal/2.webp";
+import Image3 from "@/public/carousal/3.webp";
+import Image4 from "@/public/carousal/4.webp";
+import Image5 from "@/public/carousal/5.webp";
 import leftArrow from "@/public/carousal/left_arrow.svg";
 import rightArrow from "@/public/carousal/right_arrow.svg";
 import { useState } from "react";
