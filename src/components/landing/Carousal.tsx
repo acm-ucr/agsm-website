@@ -51,7 +51,7 @@ const Carousal = () => {
         GALLERY
       </div>
       <div className="relative my-8 w-full">
-        <div className="absolute left-0 top-0 z-20 flex h-full w-16 items-center justify-start md:w-32">
+        <div className="absolute top-0 left-0 z-20 flex h-full w-16 items-center justify-start md:w-32">
           <div className="from-agsm-yellow-100 pointer-events-none absolute inset-0 bg-gradient-to-r to-transparent" />
           <button
             onClick={() => carouselApi?.scrollPrev()}
@@ -83,7 +83,7 @@ const Carousal = () => {
           </CarouselContent>
         </Carousel>
 
-        <div className="absolute right-0 top-0 z-20 flex h-full w-16 items-center justify-end md:w-32">
+        <div className="absolute top-0 right-0 z-20 flex h-full w-16 items-center justify-end md:w-32">
           <div className="from-agsm-yellow-100 pointer-events-none absolute inset-0 bg-gradient-to-l to-transparent" />
           <button
             onClick={() => carouselApi?.scrollNext()}
