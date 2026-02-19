@@ -11,7 +11,7 @@ const PastEvents = ({
   photo: StaticImageData;
 }) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-4 pt-35">
+    <div className="flex flex-col items-center justify-center gap-4">
       <div className="to-agsm-blue-100 text-agsm-blue-200 font-agsm-main flex h-20 w-full items-center justify-center bg-gradient-to-r from-white from-0% to-80% text-4xl font-extrabold">
         {text1}
       </div>
@@ -35,4 +35,3 @@ const PastEvents = ({
 };
 
 export default PastEvents;
-
