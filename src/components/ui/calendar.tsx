@@ -15,6 +15,101 @@ import {
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
 
+// --- Types ---
+export type EventProps = Partial<{
+  start: string;
+  end: string;
+  location: string;
+  description: string;
+  title: string;
+}>;
+
+export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
+  buttonVariant?: React.ComponentProps<typeof Button>["variant"];
+  events?: EventProps[];
+  setCurrent?: (props: EventProps) => void;
+};
+
+// --- Day Cell ---
+type CalendarDayCellProps = {
+  date: Date;
+  displayMonth: Date;
+  events: EventProps[];
+  setCurrent: (props: EventProps) => void;
+};
+
+const CalendarDayCell = ({
+  date,
+  displayMonth,
+  events,
+  setCurrent,
+}: CalendarDayCellProps) => {
+  const today = new Date();
+  const isToday =
+    today.getDate() === date.getDate() &&
+    today.getMonth() === date.getMonth() &&
+    today.getFullYear() === date.getFullYear();
+
+  const currentMonth = displayMonth.getMonth() === date.getMonth();
+
+  const filteredEvents = events?.filter(({ start, end }) => {
+    if (!start || !end) return false;
+    const eventStartDate = new Date(start);
+    const eventEndDate = new Date(end);
+    eventStartDate.setHours(0, 0, 0, 0);
+    eventEndDate.setHours(23, 59, 59, 999);
+    return date >= eventStartDate && date <= eventEndDate;
+  });
+
+  return (
+    <td className="w-full overflow-hidden p-0 align-top">
+      <div
+        className={cn(
+          "no-scrollbar flex aspect-square max-h-[200px] min-h-[80px] flex-col border border-[#A2A2A2]/50 p-1",
+          isToday && "bg-agsm-blue-150",
+          !currentMonth && "text-agsm-blue-200/40",
+        )}
+      >
+        <p
+          className={cn(
+            "text-agsm-blue-200 sticky top-0 mb-1 px-1 text-sm font-bold",
+            isToday && "text-agsm-blue-200/65",
+            !currentMonth && "opacity-40",
+          )}
+        >
+          {date.getDate()}
+        </p>
+
+        {filteredEvents?.map(
+          ({ title, start, end, location, description }, index) => {
+            const startDate = new Date(start as string);
+            if (
+              startDate.getDate() === date.getDate() &&
+              startDate.getMonth() === date.getMonth() &&
+              startDate.getFullYear() === date.getFullYear()
+            ) {
+              return (
+                <button
+                  key={index}
+                  onClick={() =>
+                    setCurrent({ title, start, end, location, description })
+                  }
+                  className="bg-agsm-blue-200 mb-1 w-full overflow-auto rounded px-1 py-1 text-left my-auto text-xs text-white transition hover:opacity-75"
+                >
+                  <p className="font-bold text-[10px]">{title}</p>
+                  <p className="text-[8px]">{description}</p>
+                </button>
+              );
+            }
+            return null;
+          },
+        )}
+      </div>
+    </td>
+  );
+};
+
+// --- Main Calendar ---
 function Calendar({
   className,
   classNames,
@@ -23,10 +118,10 @@ function Calendar({
   buttonVariant = "ghost",
   formatters,
   components,
+  events = [],
+  setCurrent,
   ...props
-}: React.ComponentProps<typeof DayPicker> & {
-  buttonVariant?: React.ComponentProps<typeof Button>["variant"];
-}) {
+}: CalendarProps) {
   const defaultClassNames = getDefaultClassNames();
 
   return (
@@ -54,7 +149,7 @@ function Calendar({
         ),
         month: cn("flex flex-col w-full gap-5", defaultClassNames.month),
         nav: cn(
-          "flex items-center gap-1 w-full absolute top-0 justify-center gap-45",
+          "flex items-center w-full absolute top-0 justify-center gap-50",
           defaultClassNames.nav,
         ),
         button_previous: cn(
@@ -109,7 +204,7 @@ function Calendar({
           defaultClassNames.week_number,
         ),
         day: cn(
-          "relative w-full h-full font-bold border-[1px] border-[#A2A2A2]/50 pl-2 pt-2 [&:last-child[data-selected=true]_button]:rounded-r-md group/day aspect-square select-none",
+          "relative w-full h-full font-bold [&:last-child[data-selected=true]_button]:rounded-r-md group/day select-none",
           props.showWeekNumber
             ? "[&:nth-child(2)[data-selected=true]_button]:rounded-l-md"
             : "[&:first-child[data-selected=true]_button]:rounded-l-md",
@@ -137,49 +232,48 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        Root: ({ className, rootRef, ...props }) => {
-          return (
-            <div
-              data-slot="calendar"
-              ref={rootRef}
-              className={cn(className)}
-              {...props}
-            />
-          );
-        },
+        Root: ({ className, rootRef, ...props }) => (
+          <div
+            data-slot="calendar"
+            ref={rootRef}
+            className={cn(className)}
+            {...props}
+          />
+        ),
         Chevron: ({ className, orientation, ...props }) => {
-          if (orientation === "left") {
+          if (orientation === "left")
             return (
               <ChevronLeftIcon
                 className={cn("size-6 text-slate-500", className)}
                 {...props}
               />
             );
-          }
-
-          if (orientation === "right") {
+          if (orientation === "right")
             return (
               <ChevronRightIcon
                 className={cn("size-6 text-slate-500", className)}
                 {...props}
               />
             );
-          }
-
           return (
             <ChevronDownIcon className={cn("size-4", className)} {...props} />
           );
         },
-        DayButton: CalendarDayButton,
-        WeekNumber: ({ children, ...props }) => {
-          return (
-            <td {...props}>
-              <div className="flex size-(--cell-size) items-center justify-center text-center">
-                {children}
-              </div>
-            </td>
-          );
-        },
+        Day: ({ day }) => (
+          <CalendarDayCell
+            date={day.date}
+            displayMonth={day.displayMonth}
+            events={events}
+            setCurrent={setCurrent ?? (() => {})}
+          />
+        ),
+        WeekNumber: ({ children, ...props }) => (
+          <td {...props}>
+            <div className="flex size-(--cell-size) items-center justify-center text-start">
+              {children}
+            </div>
+          </td>
+        ),
         ...components,
       }}
       {...props}
@@ -187,6 +281,7 @@ function Calendar({
   );
 }
 
+// --- Keep your CalendarDayButton unchanged ---
 function CalendarDayButton({
   className,
   day,
