@@ -2,17 +2,17 @@
 
 import {
   Calendar,
-  // EventProps,
+  EventProps,
 } from "@/components/ui/calendar";
 import { useQuery } from "@tanstack/react-query";
-// import { useState } from "react";
-// import {
-//   Dialog,
-//   DialogContent,
-//   DialogDescription,
-//   DialogHeader,
-//   DialogTitle,
-// } from "@/components/ui/dialog";
+import { useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 type GoogleEventProps = {
   start: { dateTime: string };
@@ -23,7 +23,7 @@ type GoogleEventProps = {
 };
 
 const Events = () => {
-  // const [current, setCurrent] = useState<EventProps>({});
+  const [current, setCurrent] = useState<EventProps>({});
   const today = new Date();
   const timeMin = new Date(
     today.getTime() - 60 * 60 * 24 * 7 * 5 * 1000,
@@ -61,7 +61,7 @@ const Events = () => {
   console.log("Fetched calendar events:", data);
   return (
     <>
-      {/* {!isPending && (
+      {!isPending && (
         <Dialog
           open={Object.keys(current).length > 0}
           onOpenChange={() => setCurrent({})}
@@ -93,14 +93,14 @@ const Events = () => {
             </DialogHeader>
           </DialogContent>
         </Dialog>
-      )} */}
+      )}
       <div className="mx-auto my-4 flex w-full pt-4 pb-12">
         <Calendar
           mode="single"
           selected={new Date()}
-          className="mx-auto w-1/2"
+          className="mx-auto w-2/3"
           events={data}
-          // setCurrent={setCurrent}
+          setCurrent={setCurrent}
         />
       </div>
     </>
