@@ -66,11 +66,11 @@ const Events = () => {
           open={Object.keys(current).length > 0}
           onOpenChange={() => setCurrent({})}
         >
-          <DialogContent className="border-aisc-pink border-4 p-8">
+          <DialogContent className="border-agsm-blue-200 border-4 p-8">
             <DialogHeader>
               <DialogTitle>
                 <p className="text-4xl font-medium">{current.title}</p>
-                <div className="font-openSans my-2 flex flex-col gap-1 text-base">
+                <div className="font-agsm-main my-2 flex flex-col gap-1 text-base">
                   <p>Location: {current.location}</p>
                   Time:{" "}
                   {new Date(current.start as string).toLocaleTimeString(
@@ -87,7 +87,7 @@ const Events = () => {
                   })}
                 </div>
               </DialogTitle>
-              <DialogDescription className="font-aisc-alt relative text-black">
+              <DialogDescription className="relative text-black">
                 {current.description}
               </DialogDescription>
             </DialogHeader>
@@ -98,7 +98,7 @@ const Events = () => {
         <Calendar
           mode="single"
           selected={new Date()}
-          className="mx-auto w-2/3"
+          className="mx-auto w-3/5"
           events={data}
           setCurrent={setCurrent}
         />

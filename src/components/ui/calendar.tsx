@@ -94,10 +94,23 @@ const CalendarDayCell = ({
                   onClick={() =>
                     setCurrent({ title, start, end, location, description })
                   }
-                  className="bg-agsm-blue-200 mb-1 w-full overflow-auto rounded px-1 py-1 text-left my-auto text-xs text-white transition hover:opacity-75"
+                  className="bg-agsm-blue-200 my-auto mb-1 w-full overflow-auto rounded px-1 py-1 text-left text-xs text-white transition hover:cursor-pointer hover:opacity-75"
                 >
-                  <p className="font-bold text-[10px]">{title}</p>
-                  <p className="text-[8px]">{description}</p>
+                  <p className="text-[10px] font-bold">{title}</p>
+                  <p className="text-[8px]">
+                    {location} |{" "}
+                    {new Date(start as string).toLocaleTimeString("default", {
+                      hour: "numeric",
+                      minute: "2-digit",
+                      hour12: true,
+                    })}{" "}
+                    -{" "}
+                    {new Date(end as string).toLocaleTimeString("default", {
+                      hour: "numeric",
+                      minute: "2-digit",
+                      hour12: true,
+                    })}
+                  </p>
                 </button>
               );
             }
