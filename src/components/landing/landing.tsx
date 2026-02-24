@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Landing = () => {
   return (
-    <div className="flex flex-col h-screen mb-48 bg-agsm-yellow-100">
+    <div className="bg-agsm-yellow-100 mb-48 flex h-screen flex-col">
       <div className="relative overflow-hidden">
         <Image
           src={LandingTop}

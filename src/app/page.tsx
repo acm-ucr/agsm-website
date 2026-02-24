@@ -1,7 +1,7 @@
 import AboutUs from "@/components/landing/AboutUs";
 import OurVision from "@/components/landing/OurVision";
 import Carousal from "@/components/landing/Carousal";
-import Landing from "@/components/landing/landing"
+import Landing from "@/components/landing/landing";
 
 const Home = () => {
   return (
