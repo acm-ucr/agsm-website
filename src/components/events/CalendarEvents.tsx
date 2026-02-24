@@ -1,9 +1,6 @@
 "use client";
 
-import {
-  Calendar,
-  EventProps,
-} from "@/components/ui/calendar";
+import { Calendar, EventProps } from "@/components/ui/calendar";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import {
