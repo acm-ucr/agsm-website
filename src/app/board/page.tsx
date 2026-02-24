@@ -1,5 +1,4 @@
 import Card from "@/components/board/Card";
-
 export default function BoardPage() {
   return (
     <div className="flex gap-10 p-10">

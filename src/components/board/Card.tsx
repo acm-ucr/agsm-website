@@ -8,14 +8,13 @@ interface BoardProps {
 
 const Card = ({ name, role, image }: BoardProps) => {
   return (
-    <div className="flex flex-col items-center">
-      <div className="bg-agsm-yellow-100 rounded-sm p-6 pb-4">
-        <div className="relative h-65 w-65">
+    <div className="flex w-64 flex-col items-center">
+      <div className="bg-agsm-yellow-100 w-full rounded-sm p-6 pb-4">
+        <div className="relative aspect-square w-full">
           <Image
             src={image}
             alt={`Photo of ${name}`}
-            width={300}
-            height={300}
+            fill
             className="rounded-sm object-cover"
           />
         </div>
