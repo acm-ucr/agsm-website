@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Landing = () => {
   return (
-    <div className="flex flex-col">
+    <div className="bg-agsm-yellow-100 mb-48 flex h-screen flex-col">
       <div className="relative overflow-hidden">
         <Image
           src={LandingTop}
@@ -20,7 +20,7 @@ const Landing = () => {
         </div>
       </div>
 
-      <div className="absolute my-221 w-full bg-white">
+      <div className="absolute my-221 w-full">
         <div className="text-agsm-blue-200 mt-4 flex justify-center text-3xl">
           UC Riverside's premier community for aspiring product managers
         </div>
