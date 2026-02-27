@@ -1,15 +1,15 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface BoardProps {
   name: string;
   role: string;
-  image: string;
+  image: string | StaticImageData;
 }
 
 const Card = ({ name, role, image }: BoardProps) => {
   return (
     <div className="flex w-64 flex-col items-center">
-      <div className="bg-agsm-yellow-100 w-full rounded-sm p-6 pb-4">
+      <div className="bg-agsm-yellow-100 w-full rounded-sm">
         <div className="relative aspect-square w-full">
           <Image
             src={image}
