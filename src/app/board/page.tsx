@@ -9,14 +9,14 @@ import Natalie from "@/public/board/Natalie.webp";
 import Kathiroli from "@/public/board/Kathiroli.webp";
 
 const executives = [
-  { image: Sheetal, name: "Sheetal Janala", position: "President" },
-  { image: Kazi, name: "Kazi Nahian", position: "Vice President" },
-  { image: Manshavi, name: "Manshavi Agarwal", position: "Vice President" },
+  { image: Sheetal, name: "Sheetal Janala", role: "President" },
+  { image: Kazi, name: "Kazi Nahian", role: "Vice President" },
+  { image: Manshavi, name: "Manshavi Agarwal", role: "Vice President" },
 ];
 
 const operations = [
-  { image: Natalie, name: "Natalie Trinh", position: "Director" },
-  { image: Kathiroli, name: "Kathiroli Vasu", position: "Executive" },
+  { image: Natalie, name: "Natalie Trinh", role: "Director" },
+  { image: Kathiroli, name: "Kathiroli Vasu", role: "Executive" },
 ];
 
 export default function BoardPage() {
@@ -29,7 +29,7 @@ export default function BoardPage() {
             key={member.name}
             image={member.image}
             name={member.name}
-            position={member.position}
+            role={member.role}
           />
         ))}
       </div>
@@ -40,7 +40,7 @@ export default function BoardPage() {
             key={member.name}
             image={member.image}
             name={member.name}
-            position={member.position}
+            role={member.role}
           />
         ))}
       </div>
