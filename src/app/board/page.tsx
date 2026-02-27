@@ -19,7 +19,7 @@ const operations = [
   { image: Kathiroli, name: "Kathiroli Vasu", position: "Executive" },
 ];
 
-const Board = () => {
+export default function BoardPage() {
   return (
     <div className="flex w-screen flex-col items-center justify-center gap-16 py-16">
       <Header title="Executives" />
@@ -46,6 +46,4 @@ const Board = () => {
       </div>
     </div>
   );
-};
-
-export default Board;
+}
