@@ -1,25 +1,30 @@
 import Image, { StaticImageData } from "next/image";
 
-interface BoardCardProps {
-  image: StaticImageData;
+interface BoardProps {
   name: string;
-  position: string;
+  role: string;
+  image: string | StaticImageData;
 }
 
-const BoardCard = ({ image, name, position }: BoardCardProps) => {
+const Card = ({ name, role, image }: BoardProps) => {
   return (
-    <div className="flex flex-col items-center text-center">
-      <Image
-        src={image}
-        alt={name}
-        className="h-full w-[40vw] rounded-sm object-cover sm:w-[20vw]"
-      />
-      <div className="mt-4">
-        <p className="text-agsm-blue-200 text-3xl font-semibold">{name}</p>
+    <div className="flex w-64 flex-col items-center">
+      <div className="bg-agsm-yellow-100 w-full rounded-sm">
+        <div className="relative aspect-square w-full">
+          <Image
+            src={image}
+            alt={`Photo of ${name}`}
+            fill
+            className="rounded-sm object-cover"
+          />
+        </div>
       </div>
-      <p className="text-agsm-blue-200 text-2xl">{position}</p>
+      <div className="mt-4 text-center">
+        <p className="text-agsm-blue-200 text-xl font-semibold">{name}</p>
+        <p className="text-agsm-blue-200 text-sm">{role}</p>
+      </div>
     </div>
   );
 };
 
-export default BoardCard;
+export default Card;
