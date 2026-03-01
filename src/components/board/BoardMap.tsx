@@ -14,7 +14,7 @@ const BoardMap = () => {
                 <Card
                   key={index}
                   name={name}
-                  position={position}
+                  role={position}
                   image={image}
                 />
               </div>
@@ -29,7 +29,7 @@ const BoardMap = () => {
                 <Card
                   key={index}
                   name={name}
-                  position={position}
+                  role={position}
                   image={image}
                 />
               </div>
@@ -44,7 +44,7 @@ const BoardMap = () => {
                 <Card
                   key={index}
                   name={name}
-                  position={position}
+                  role={position}
                   image={image}
                 />
               </div>
@@ -59,7 +59,7 @@ const BoardMap = () => {
                 <Card
                   key={index}
                   name={name}
-                  position={position}
+                  role={position}
                   image={image}
                 />
               </div>

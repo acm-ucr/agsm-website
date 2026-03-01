@@ -46,6 +46,7 @@ export default function BoardPage() {
             role={member.role}
           />
         ))}
+        </div>
       </div>
     </div>
   );
