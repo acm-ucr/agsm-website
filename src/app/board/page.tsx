@@ -24,28 +24,28 @@ export default function BoardPage() {
   return (
     <div className="bg-agsm-yellow-100 flex h-screen w-screen flex-col items-center justify-center">
       <BoardMap />
-    <div className="flex w-screen flex-col items-center justify-center gap-16 py-16">
-      <Header title="Executives" />
-      <div className="flex w-full flex-row justify-center gap-16">
-        {executives.map((member) => (
-          <BoardCard
-            key={member.name}
-            image={member.image}
-            name={member.name}
-            role={member.role}
-          />
-        ))}
-      </div>
-      <Header title="Operations" />
-      <div className="flex w-full flex-row justify-center gap-16">
-        {operations.map((member) => (
-          <BoardCard
-            key={member.name}
-            image={member.image}
-            name={member.name}
-            role={member.role}
-          />
-        ))}
+      <div className="flex w-screen flex-col items-center justify-center gap-16 py-16">
+        <Header title="Executives" />
+        <div className="flex w-full flex-row justify-center gap-16">
+          {executives.map((member) => (
+            <BoardCard
+              key={member.name}
+              image={member.image}
+              name={member.name}
+              role={member.role}
+            />
+          ))}
+        </div>
+        <Header title="Operations" />
+        <div className="flex w-full flex-row justify-center gap-16">
+          {operations.map((member) => (
+            <BoardCard
+              key={member.name}
+              image={member.image}
+              name={member.name}
+              role={member.role}
+            />
+          ))}
         </div>
       </div>
     </div>
