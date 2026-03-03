@@ -7,7 +7,7 @@ interface HeaderProps {
 
 const Header = ({ text }: HeaderProps) => {
   return (
-    <div>
+    <div className="mb-16">
       <div className="my-12">
         <div className="relative flex h-full flex-col items-center justify-center text-center">
           <Image
