@@ -8,20 +8,20 @@ import Link from "next/link";
 
 const Landing = () => {
   return (
-    <div className="bg-agsm-yellow-100 mb-48 flex h-screen flex-col">
-      <div className="relative overflow-hidden">
+    <div className="bg-agsm-yellow-100 mb-65 flex flex-col lg:h-screen">
+      <div className="relative w-screen overflow-hidden">
         <Image
           src={LandingTop}
           alt="Cover Image"
           className="h-[120%] w-[150%] object-cover object-center"
         />
-        <div className="absolute -bottom-1 flex w-full justify-center text-8xl font-bold text-white">
+        <div className="absolute -bottom-1 flex w-full justify-center text-4xl font-bold text-white lg:text-8xl">
           UCR AGSM Product Club
         </div>
       </div>
 
-      <div className="absolute my-221 w-full">
-        <div className="text-agsm-blue-200 mt-4 flex justify-center text-3xl">
+      <div className="absolute my-60 w-full md:my-110 lg:my-180">
+        <div className="text-agsm-blue-200 mt-4 flex justify-center text-center text-2xl lg:text-3xl">
           UC Riverside's premier community for aspiring product managers
         </div>
         <Link
