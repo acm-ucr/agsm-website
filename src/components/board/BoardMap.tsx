@@ -1,11 +1,37 @@
 import Card from "@/components/board/Card";
 import Header from "@/components/board/Header";
 import { board } from "@/data/Board";
+import { executives } from "@/data/Board";
+import { operations } from "@/data/Board";
 
 const BoardMap = () => {
   return (
-    <div className="flex h-full w-full items-center justify-center py-8">
-      <div className="grid w-full max-w-4xl grid-cols-2 gap-6 px-4">
+    <div className="flex h-full w-full flex-col items-center justify-center py-8">
+      <div className="flex w-screen flex-col items-center justify-center gap-16 py-16">
+        <Header title="Executives" />
+        <div className="flex w-full flex-row justify-center gap-16">
+          {executives.map((member) => (
+            <Card
+              key={member.name}
+              image={member.image}
+              name={member.name}
+              role={member.role}
+            />
+          ))}
+        </div>
+        <Header title="Operations" />
+        <div className="flex w-full flex-row justify-center gap-16">
+          {operations.map((member) => (
+            <Card
+              key={member.name}
+              image={member.image}
+              name={member.name}
+              role={member.role}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="mx-auto grid w-full max-w-4xl grid-cols-2 gap-6 px-4">
         <div className="flex flex-col items-center gap-2">
           <Header title="Marketing" />
           <div className="flex w-full flex-row justify-center gap-2">

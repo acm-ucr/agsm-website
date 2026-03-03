@@ -1,9 +1,14 @@
-import Testimonials from "@/components/alumni/Testimonials";
+import TestimonialsCard from "@/components/alumni/TestimonialsCard";
+import TestimonialsHeader from "@/components/alumni/Testimonials";
 import AlumniImage from "../../../public/board/Sheetal.webp";
+import Header from "@/components/Header";
+
 const Alumni = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <Testimonials
+    <div className="flex w-full flex-col">
+      <Header text={"ALUMNI"} />
+      <TestimonialsHeader />
+      <TestimonialsCard
         headshot={AlumniImage}
         name="Sheetal Janala"
         testimonial="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolorum recusandae, nisi voluptate ipsa nihil 
