@@ -1,11 +1,11 @@
-import Header from "@/components/board/Header";
+import BoardMap from "@/components/board/BoardMap";
+import Header from "@/components/Header";
 
-const Board = () => {
+export default function BoardPage() {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      <Header title="Executives" />
+    <div className="flex w-full flex-col">
+      <Header text={"MEET THE BOARD"} />
+      <BoardMap />
     </div>
   );
-};
-
-export default Board;
+}
