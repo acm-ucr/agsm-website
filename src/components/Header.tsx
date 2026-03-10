@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const Header = ({ text }: HeaderProps) => {
   return (
-    <motion.div 
+    <motion.div
       className="mb-16"
       initial={{ opacity: 0, x: 40 }}
       whileInView={{ opacity: 1, x: 0 }}
