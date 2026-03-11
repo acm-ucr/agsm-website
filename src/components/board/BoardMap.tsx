@@ -27,8 +27,25 @@ const BoardMap = () => {
           <Header title="Executives" />
         </motion.div>
         <div className="flex w-full flex-row flex-wrap justify-center gap-16">
-          {executives.map((member) => (
-            <Card image={member.image} name={member.name} role={member.role} />
+          {executives.map((member, index) => (
+            <motion.div
+              key={index}
+              variants={titleVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: index * 0.1,
+              }}
+            >
+              <Card
+                image={member.image}
+                name={member.name}
+                role={member.role}
+              />
+            </motion.div>
           ))}
         </div>
         <motion.div
@@ -41,13 +58,26 @@ const BoardMap = () => {
           <Header title="Operations" />
         </motion.div>
         <div className="flex w-full flex-row flex-wrap justify-center gap-16">
-          {operations.map((member) => (
-            <Card
+          {operations.map((member, index) => (
+            <motion.div
               key={member.name}
-              image={member.image}
-              name={member.name}
-              role={member.role}
-            />
+              variants={titleVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.5 }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: index * 0.1,
+              }}
+            >
+              <Card
+                key={member.name}
+                image={member.image}
+                name={member.name}
+                role={member.role}
+              />
+            </motion.div>
           ))}
         </div>
       </div>
@@ -64,9 +94,17 @@ const BoardMap = () => {
           </motion.div>
           <div className="-ml-18 flex w-full flex-row justify-center gap-2">
             {board.slice(0, 1).map(({ image, name, position }, index) => (
-              <div className="box-border w-48 p-2">
+              <motion.div
+                key={index}
+                className="box-border w-48 p-2"
+                variants={titleVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.5 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+              >
                 <Card key={index} name={name} role={position} image={image} />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -82,9 +120,17 @@ const BoardMap = () => {
           </motion.div>
           <div className="-ml-18 flex w-full flex-row justify-center gap-2">
             {board.slice(1, 2).map(({ image, name, position }, index) => (
-              <div className="box-border w-48 p-2">
+              <motion.div
+                key={index}
+                className="box-border w-48 p-2"
+                variants={titleVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.5 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+              >
                 <Card key={index} name={name} role={position} image={image} />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -100,9 +146,17 @@ const BoardMap = () => {
           </motion.div>
           <div className="-ml-18 flex w-full flex-row justify-center gap-2">
             {board.slice(2, 3).map(({ image, name, position }, index) => (
-              <div className="box-border w-48 p-2">
+              <motion.div
+                key={index}
+                className="box-border w-48 p-2"
+                variants={titleVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.5 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+              >
                 <Card key={index} name={name} role={position} image={image} />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -118,9 +172,17 @@ const BoardMap = () => {
           </motion.div>
           <div className="-ml-18 flex w-full flex-row justify-center gap-2">
             {board.slice(3, 4).map(({ image, name, position }, index) => (
-              <div className="box-border w-48 p-2">
+              <motion.div
+                key={index}
+                className="box-border w-48 p-2"
+                variants={titleVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.5 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+              >
                 <Card key={index} name={name} role={position} image={image} />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
