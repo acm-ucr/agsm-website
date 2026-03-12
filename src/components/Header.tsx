@@ -1,5 +1,7 @@
+"use client";
 import headerBackground from "@/public/header_background.svg";
 import Image from "next/image";
+import { motion } from "motion/react";
 
 interface HeaderProps {
   text: string;
@@ -7,8 +9,14 @@ interface HeaderProps {
 
 const Header = ({ text }: HeaderProps) => {
   return (
-    <div className="mb-16">
-      <div className="my-12">
+    <motion.div
+      className="mb-16"
+      initial={{ opacity: 0, x: 40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1.2 }}
+      viewport={{ once: true }}
+    >
+      <div className="my-6 md:my-12">
         <div className="relative flex h-full flex-col items-center justify-center text-center">
           <Image
             src={headerBackground}
@@ -16,13 +24,13 @@ const Header = ({ text }: HeaderProps) => {
             objectFit="cover"
             className="absolute z-0 h-full w-full"
           />
-          <div className="text-agsm-blue-200 z-20 w-3/5 py-12 text-9xl">
+          <div className="text-agsm-blue-200 z-20 w-4/5 py-12 text-3xl md:w-3/5 md:py-8 md:text-6xl lg:py-12 lg:text-9xl">
             {text}
           </div>
         </div>
       </div>
       <div className="border-agsm-blue-200 w-full border-1" />
-    </div>
+    </motion.div>
   );
 };
 
