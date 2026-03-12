@@ -59,8 +59,7 @@ const WhatWeOffer = () => {
             What We Offer
           </p>
         </div>
-
-        <div className="mb-24 grid grid-cols-3 gap-x-12 pl-24">
+        <div className="mb-24 grid grid-cols-1 gap-y-8 px-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-12 lg:px-0 lg:pl-24">
           <motion.div className="mt-8" whileHover={{ scale: 1.1 }}>
             <Card
               Icon={cardsData[0].icon}
@@ -76,7 +75,7 @@ const WhatWeOffer = () => {
             />
           </motion.div>
           <motion.div className="mt-8" whileHover={{ scale: 1.1 }}>
-            <div className="-mr-8 h-105 overflow-hidden rounded-2xl">
+            <div className="h-105 overflow-hidden rounded-2xl lg:-mr-8">
               <Image
                 src={Image1}
                 alt="UCR Business students"
@@ -86,9 +85,9 @@ const WhatWeOffer = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-3 gap-x-12 pr-24">
+        <div className="grid grid-cols-1 gap-y-8 px-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-12 lg:px-0 lg:pr-24">
           <motion.div className="mt-8" whileHover={{ scale: 1.1 }}>
-            <div className="-ml-8 h-105 overflow-hidden rounded-2xl">
+            <div className="h-105 overflow-hidden rounded-2xl lg:-ml-8">
               <Image
                 src={Image2}
                 alt="UCR table event"
