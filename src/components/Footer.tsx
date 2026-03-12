@@ -8,13 +8,13 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="bg-agsm-blue-200 flex h-45 w-full">
-      <div className="flex h-full w-full items-center justify-between px-30">
+    <div className="bg-agsm-blue-200 flex h-30 w-full md:h-45">
+      <div className="relative flex h-full w-full items-center justify-between px-30">
         <div className="flex">
-          <div>
+          <div className="hidden md:block">
             <Image src={AGSMLogo} alt="AGSM Logo" className="size-30" />
           </div>
-          <div className="mt-1 ml-10 flex flex-col gap-7 text-white">
+          <div className="mt-1 ml-10 flex hidden flex-col gap-7 text-white md:block">
             <div>
               <p className="mb-1 text-3xl font-semibold">AGSM Product Club</p>
               <p className="text-xs">
@@ -26,7 +26,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-3 pb-3">
+        <div className="absolute left-3 md:hidden">
+          <Image src={AGSMLogo} alt="AGSM Logo" className="size-20" />
+        </div>
+        <div className="absolute right-3 flex flex-col gap-3 md:relative md:pb-3">
           <div className="flex justify-end">
             <p className="text-white">Contact Us!</p>
           </div>
