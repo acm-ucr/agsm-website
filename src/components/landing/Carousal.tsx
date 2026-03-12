@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "motion/react";
 
 import Image, { StaticImageData } from "next/image";
 import {
@@ -47,9 +48,15 @@ const Carousal = () => {
 
   return (
     <div className="p-6">
-      <div className="text-agsm-blue-200 flex items-center justify-center text-6xl font-bold">
+      <motion.div
+        className="text-agsm-blue-200 flex items-center justify-center text-6xl font-bold"
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
         GALLERY
-      </div>
+      </motion.div>
       <div className="relative my-8 w-full">
         <div className="absolute top-0 left-0 z-20 flex h-full w-16 items-center justify-start md:w-32">
           <div className="from-agsm-yellow-100 pointer-events-none absolute inset-0 bg-gradient-to-r to-transparent" />
@@ -60,7 +67,6 @@ const Carousal = () => {
             <Image src={leftArrow} alt="Left Arrow" />
           </button>
         </div>
-
         <Carousel
           setApi={setCarouselApi}
           opts={{
@@ -69,18 +75,29 @@ const Carousal = () => {
           }}
           className="w-full"
         >
-          <CarouselContent className="-ml-10">
-            {imageArray.map(({ data, alt }, index) => (
-              <CarouselItem
-                key={index}
-                className="basis-full pl-10 md:basis-1/3"
-              >
-                <div className="relative overflow-hidden rounded-xl">
-                  <Image src={data} alt={alt} className="block h-auto w-full" />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <CarouselContent className="-ml-10">
+              {imageArray.map(({ data, alt }, index) => (
+                <CarouselItem
+                  key={index}
+                  className="basis-full pl-10 md:basis-1/3"
+                >
+                  <div className="relative overflow-hidden rounded-xl">
+                    <Image
+                      src={data}
+                      alt={alt}
+                      className="block h-auto w-full"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </motion.div>
         </Carousel>
 
         <div className="absolute top-0 right-0 z-20 flex h-full w-16 items-center justify-end md:w-32">
@@ -93,11 +110,18 @@ const Carousal = () => {
           </button>
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      <motion.div
+        className="flex items-center justify-center"
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        whileHover={{ scale: 1.1 }}
+        viewport={{ once: true }}
+      >
         <div className="bg-agsm-blue-200 rounded-md px-6 py-2 text-xl text-white">
           See More
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
