@@ -65,14 +65,14 @@ const CalendarDayCell = ({
     <td className="w-full overflow-hidden p-0 align-top">
       <div
         className={cn(
-          "no-scrollbar flex aspect-square max-h-[200px] min-h-[80px] flex-col border border-[#A2A2A2]/50 p-1",
+          "no-scrollbar flex h-15 max-h-[200px] flex-col border border-[#A2A2A2]/50 p-0.5 md:p-1 lg:h-35",
           isToday && "bg-agsm-blue-150",
           !currentMonth && "text-agsm-blue-200/40",
         )}
       >
         <p
           className={cn(
-            "text-agsm-blue-200 sticky top-0 mb-1 px-1 text-sm font-bold",
+            "text-agsm-blue-200 sticky top-0 mb-0.5 px-0.5 text-[12px] font-bold md:mb-1 md:px-1 md:text-lg",
             isToday && "text-agsm-blue-200/65",
             !currentMonth && "opacity-40",
           )}
@@ -94,10 +94,13 @@ const CalendarDayCell = ({
                   onClick={() =>
                     setCurrent({ title, start, end, location, description })
                   }
-                  className="bg-agsm-blue-200 my-auto mb-1 w-full overflow-auto rounded px-1 py-1 text-left text-xs text-white transition hover:cursor-pointer hover:opacity-75"
+                  className="bg-agsm-blue-200 my-auto mb-0.5 w-full overflow-hidden rounded px-0.5 py-0.5 text-left text-xs text-white transition hover:cursor-pointer hover:opacity-75 md:mb-1 md:px-1 md:py-1"
                 >
-                  <p className="text-[10px] font-bold">{title}</p>
-                  <p className="text-[8px]">
+                  <p className="truncate text-[8px] font-bold md:text-[10px]">
+                    {title}
+                  </p>
+                  {/* Hide time/location detail on mobile */}
+                  <p className="hidden text-[8px] md:block">
                     {location} |{" "}
                     {new Date(start as string).toLocaleTimeString("default", {
                       hour: "numeric",
@@ -155,14 +158,17 @@ function Calendar({
         ...formatters,
       }}
       classNames={{
-        root: cn("w-fit", defaultClassNames.root),
+        root: cn("w-full", defaultClassNames.root),
         months: cn(
-          "flex gap-4 flex-col md:flex-row relative",
+          "flex gap-4 flex-col md:flex-row gap-4 w-full",
           defaultClassNames.months,
         ),
-        month: cn("flex flex-col w-full gap-5", defaultClassNames.month),
+        month: cn(
+          "flex flex-col w-full gap-3 md:gap-5",
+          defaultClassNames.month,
+        ),
         nav: cn(
-          "flex items-center w-full absolute top-0 justify-center pr-5 gap-50",
+          "flex items-center absolute top-97 md:top-133 justify-center lg:ml-50 md:pl-45 gap-60 md:gap-70",
           defaultClassNames.nav,
         ),
         button_previous: cn(
@@ -194,17 +200,17 @@ function Calendar({
         caption_label: cn(
           "select-none font-bold justify-self-center",
           captionLayout === "label"
-            ? "text-2xl"
+            ? "text-lg md:text-4xl"
             : "rounded-md pl-2 pr-1 flex items-center gap-1 text-sm h-8 [&>svg]:text-muted-foreground [&>svg]:size-3.5",
           defaultClassNames.caption_label,
         ),
         table: "w-full border-collapse",
         weekdays: cn(
-          "flex rounded-t-xl uppercase bg-agsm-blue-150 border border-[#A2A2A2] pt-4",
+          "flex rounded-t-xl uppercase bg-agsm-blue-150 border border-[#A2A2A2] pt-2 md:pt-4",
           defaultClassNames.weekdays,
         ),
         weekday: cn(
-          "text-muted-foreground text-agsm-blue-200 rounded-md flex-1 font-bold text-xl pb-5 select-none",
+          "text-muted-foreground text-agsm-blue-200 rounded-md flex-1 font-bold text-sm md:text-xl pb-2 md:pb-5 select-none",
           defaultClassNames.weekday,
         ),
         week: cn("flex w-full", defaultClassNames.week),
