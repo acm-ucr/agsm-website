@@ -65,14 +65,14 @@ const CalendarDayCell = ({
     <td className="w-full overflow-hidden p-0 align-top">
       <div
         className={cn(
-          "no-scrollbar flex h-15 lg:h-35 max-h-[200px] flex-col border border-[#A2A2A2]/50 p-0.5 md:p-1",
+          "no-scrollbar flex h-15 max-h-[200px] flex-col border border-[#A2A2A2]/50 p-0.5 md:p-1 lg:h-35",
           isToday && "bg-agsm-blue-150",
           !currentMonth && "text-agsm-blue-200/40",
         )}
       >
         <p
           className={cn(
-            "text-agsm-blue-200 sticky top-0 mb-0.5 md:mb-1 px-0.5 md:px-1 text-[12px] md:text-lg font-bold",
+            "text-agsm-blue-200 sticky top-0 mb-0.5 px-0.5 text-[12px] font-bold md:mb-1 md:px-1 md:text-lg",
             isToday && "text-agsm-blue-200/65",
             !currentMonth && "opacity-40",
           )}
@@ -94,13 +94,13 @@ const CalendarDayCell = ({
                   onClick={() =>
                     setCurrent({ title, start, end, location, description })
                   }
-                  className="bg-agsm-blue-200 my-auto mb-0.5 md:mb-1 w-full overflow-hidden rounded px-0.5 md:px-1 py-0.5 md:py-1 text-left text-xs text-white transition hover:cursor-pointer hover:opacity-75"
+                  className="bg-agsm-blue-200 my-auto mb-0.5 w-full overflow-hidden rounded px-0.5 py-0.5 text-left text-xs text-white transition hover:cursor-pointer hover:opacity-75 md:mb-1 md:px-1 md:py-1"
                 >
-                  <p className="truncate text-[8px] md:text-[10px] font-bold">
+                  <p className="truncate text-[8px] font-bold md:text-[10px]">
                     {title}
                   </p>
                   {/* Hide time/location detail on mobile */}
-                  <p className="hidden md:block text-[8px]">
+                  <p className="hidden text-[8px] md:block">
                     {location} |{" "}
                     {new Date(start as string).toLocaleTimeString("default", {
                       hour: "numeric",
@@ -163,7 +163,10 @@ function Calendar({
           "flex gap-4 flex-col md:flex-row gap-4 w-full",
           defaultClassNames.months,
         ),
-        month: cn("flex flex-col w-full gap-3 md:gap-5", defaultClassNames.month),
+        month: cn(
+          "flex flex-col w-full gap-3 md:gap-5",
+          defaultClassNames.month,
+        ),
         nav: cn(
           "flex items-center absolute top-97 md:top-133 justify-center lg:ml-50 md:pl-45 gap-60 md:gap-70",
           defaultClassNames.nav,
