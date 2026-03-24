@@ -95,7 +95,7 @@ const Events = () => {
         <Calendar
           mode="single"
           selected={new Date()}
-          className="mx-auto w-3/5"
+          className="mx-auto w-4/5 lg:w-3/5"
           events={data}
           setCurrent={setCurrent}
         />
