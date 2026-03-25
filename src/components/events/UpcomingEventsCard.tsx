@@ -41,7 +41,7 @@ const UpcomingEventCard = ({
       viewport={{
         once: true,
       }}
-      className="bg-agsm-yellow-100 max-w-1/3 shadow-md"
+      className="bg-agsm-yellow-100 w-full shadow-md"
     >
       <div className="p-9">
         <div className="text-agsm-blue-200 mb-8 flex items-center justify-center gap-10">
