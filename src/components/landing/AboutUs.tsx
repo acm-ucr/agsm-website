@@ -6,19 +6,19 @@ import { motion } from "motion/react";
 
 const AboutUs = () => {
   return (
-    <div className="flex flex-col items-center lg:gap-13 lg:p-5">
+    <div className="flex flex-col items-center lg:gap-5 lg:p-5">
       <motion.div
-        className="text-agsm-blue-200 mt-8 text-3xl font-bold md:mt-3 md:text-5xl lg:text-6xl"
+        className="text-agsm-blue-200 text-4xl font-semibold md:mt-3 md:text-5xl lg:text-6xl"
         initial={{ opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
       >
         ABOUT US
       </motion.div>
-      <div className="flex flex-col px-8 md:flex-col lg:w-4/5 lg:flex-row lg:gap-x-15 lg:px-0 lg:text-left">
-        <div className="mt-5 flex flex-col text-center md:mt-3 md:text-center lg:w-3/5 lg:gap-15 lg:text-left">
+      <div className="flex flex-col px-8 md:flex-col lg:w-9/10 lg:flex-row lg:gap-x-15 lg:px-0 lg:text-left">
+        <div className=" flex flex-col text-center justify-items-center md:mt-3 md:text-center lg:w-3/5 lg:text-left">
           <motion.div
-            className="text-agsm-blue-200 text-xl font-bold md:text-2xl lg:mt-7 lg:p-2 lg:text-4xl"
+            className="text-agsm-blue-200 text-xl font-bold md:text-2xl lg:text-4xl"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -26,7 +26,7 @@ const AboutUs = () => {
             Launching the Next Generation of Product Leaders
           </motion.div>
           <motion.div
-            className="mt-5 w-full text-center md:mt-3 md:px-8 md:text-center md:text-lg lg:mt-2 lg:px-0 lg:text-left lg:text-xl"
+            className=" w-full text-center md:text-center md:text-lg lg:mt-2 lg:px-0 lg:text-left lg:text-xl"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}

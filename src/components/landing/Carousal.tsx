@@ -16,6 +16,7 @@ import Image5 from "@/public/carousal/5.webp";
 import leftArrow from "@/public/carousal/left_arrow.svg";
 import rightArrow from "@/public/carousal/right_arrow.svg";
 import { useState } from "react";
+import Link from "next/link";
 
 const Carousal = () => {
   const imageArray: {
@@ -118,9 +119,11 @@ const Carousal = () => {
         whileHover={{ scale: 1.1 }}
         viewport={{ once: true }}
       >
-        <div className="bg-agsm-blue-200 rounded-md px-6 py-2 text-xl text-white">
+        <Link className="bg-agsm-blue-200 rounded-md px-6 py-2 text-xl text-white"
+              href="https://flickr.com/photos/ucrschoolofbusiness/albums"
+              aria-label="Gallery">
           See More
-        </div>
+        </Link>
       </motion.div>
     </div>
   );

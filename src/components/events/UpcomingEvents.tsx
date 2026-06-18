@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import UpcomingEventCard from "./UpcomingEventsCard";
+import UpcomingEventCard from "@/components/events/UpcomingEventsCard";
 
 const UpcomingEvents = () => {
   const sampleEvents = [
@@ -28,17 +28,17 @@ const UpcomingEvents = () => {
   ];
 
   return (
-    <div className="mb-20 flex flex-col items-center gap-8 px-6 select-none">
+    <div className=" flex flex-col items-center gap-8 p-6 select-none">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-agsm-blue-200 text-5xl font-bold md:text-7xl"
+        className="text-agsm-blue-200 text-4xl font-bold md:text-6xl"
       >
         UPCOMING EVENTS
       </motion.div>
-      <div className="mt-15 flex w-full max-w-7xl flex-col justify-center gap-8 md:flex-row">
+      <div className=" flex w-full max-w-7xl flex-col justify-center gap-8 md:flex-row">
         {sampleEvents.map((event, index) => (
           <UpcomingEventCard key={index} {...event} />
         ))}

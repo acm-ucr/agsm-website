@@ -16,7 +16,7 @@ const titleVariants = {
 const BoardMap = () => {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center py-8">
-      <div className="flex w-screen flex-col items-center justify-center gap-16 py-16">
+      <div className="flex w-screen flex-col items-center justify-center gap-10 pb-10">
         <motion.div
           variants={titleVariants}
           initial="hidden"

@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Landing = () => {
   return (
-    <div className="mb-65 flex flex-col lg:h-screen">
+    <div className="flex flex-col lg:h-screen relative">
       <div className="relative w-screen overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -19,11 +19,11 @@ const Landing = () => {
           <Image
             src={LandingTop}
             alt="Cover Image"
-            className="h-[120%] w-[150%] object-cover object-center"
+            className=" max-h-[600px] w-[150%] object-cover object-center"
           />
         </motion.div>
         <motion.div
-          className="absolute -bottom-1 flex w-full justify-center text-4xl font-bold text-white lg:text-8xl"
+          className="absolute bottom-1 flex w-full justify-center text-4xl font-bold text-white lg:text-8xl"
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -32,7 +32,7 @@ const Landing = () => {
         </motion.div>
       </div>
 
-      <div className="absolute my-60 w-full md:my-110 lg:my-180">
+      <div className="w-full">
         <motion.div
           className="text-agsm-blue-200 text-xl font-bold md:text-2xl lg:mt-7 lg:p-2 lg:text-4xl"
           initial={{ opacity: 0, y: 50 }}
@@ -50,10 +50,8 @@ const Landing = () => {
           </Link>
         </motion.div>
       </div>
-      <div className="absolute mt-[-2rem] w-full py-224">
-        <Image src={HeaderBgLeft} alt="" className="absolute left-0 w-50" />
-        <Image src={HeaderBgRight} alt="" className="absolute right-0 w-70" />
-      </div>
+      <Image src={HeaderBgLeft} alt="" className="absolute left-0 w-50 bottom-0 -z-30 hidden lg:block opacity-50" />
+      <Image src={HeaderBgRight} alt="" className="absolute right-0 w-70 bottom-0 -z-30 hidden lg:block opacity-50" />
     </div>
   );
 };

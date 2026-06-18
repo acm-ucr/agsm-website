@@ -51,7 +51,7 @@ const Footer = () => {
               <BiLogoInstagramAlt className="mt-0.5 size-8 text-white" />
             </Link>
             <Link
-              href="https://github.com/acm-ucr/agsm-website/issues/flickr.com/photos/ucrschoolofbusiness/albums"
+              href="https://flickr.com/photos/ucrschoolofbusiness/albums"
               target="_blank"
             >
               <FaFlickr className="mt-1 size-7 text-white" />
