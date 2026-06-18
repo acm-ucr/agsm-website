@@ -3,6 +3,7 @@ import WhatWeOffer from "@/components/landing/WhatWeOffer";
 import OurVision from "@/components/landing/OurVision";
 import Carousal from "@/components/landing/Carousal";
 import Landing from "@/components/landing/landing";
+import UpcomingEvents from "@/components/events/UpcomingEvents";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <AboutUs />
       <WhatWeOffer />
       <OurVision />
+      <UpcomingEvents />
       <Carousal />
     </div>
   );
