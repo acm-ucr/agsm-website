@@ -24,7 +24,7 @@ const PastEventsCard = ({
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 1.02 }}
       viewport={{ once: true }}
-      className="bg-agsm-yellow-100 flex h-full w-full flex-col items-center justify-center p-6 shadow-lg shadow-gray-500 md:w-full md:flex-row md:gap-4"
+      className="bg-agsm-yellow-100 flex h-full w-full flex-col items-center justify-center rounded-xl p-6 shadow-lg shadow-gray-500 md:w-full md:flex-row md:gap-4"
     >
       <div className="md:w-1/2">
         <Image

@@ -51,31 +51,31 @@ const WhatWeOffer = () => {
       variants={cardAnimations}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.4 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
-      <div className="overflow-hidden bg-white py-16">
+      <div className="my-10 bg-white">
         <div className="mx-auto max-w-7xl pl-4">
-          <p className="text-agsm-blue-200 mb-10 text-4xl font-semibold">
+          <p className="text-agsm-blue-200 mb-5 text-4xl font-semibold lg:text-5xl">
             What We Offer
           </p>
         </div>
-        <div className="mb-24 grid grid-cols-1 gap-y-8 px-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-12 lg:px-0 lg:pl-24">
-          <motion.div className="mt-8" whileHover={{ scale: 1.1 }}>
+        <div className="mb-10 grid grid-cols-1 gap-4 px-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 lg:px-0 lg:pl-24">
+          <motion.div whileHover={{ scale: 1.1 }}>
             <Card
               Icon={cardsData[0].icon}
               title={cardsData[0].title}
               description={cardsData[0].description}
             />
           </motion.div>
-          <motion.div className="mt-8" whileHover={{ scale: 1.1 }}>
+          <motion.div whileHover={{ scale: 1.1 }}>
             <Card
               Icon={cardsData[1].icon}
               title={cardsData[1].title}
               description={cardsData[1].description}
             />
           </motion.div>
-          <motion.div className="mt-8" whileHover={{ scale: 1.1 }}>
-            <div className="h-105 overflow-hidden rounded-2xl lg:-mr-8">
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <div className="h-105 overflow-hidden rounded-xl lg:-mr-8">
               <Image
                 src={Image1}
                 alt="UCR Business students"
@@ -85,9 +85,9 @@ const WhatWeOffer = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 gap-y-8 px-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-12 lg:px-0 lg:pr-24">
-          <motion.div className="mt-8" whileHover={{ scale: 1.1 }}>
-            <div className="h-105 overflow-hidden rounded-2xl lg:-ml-8">
+        <div className="grid grid-cols-1 gap-4 px-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 lg:px-0 lg:pr-24">
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <div className="h-105 overflow-hidden rounded-xl lg:-ml-8">
               <Image
                 src={Image2}
                 alt="UCR table event"
@@ -95,14 +95,14 @@ const WhatWeOffer = () => {
               />
             </div>
           </motion.div>
-          <motion.div className="mt-8" whileHover={{ scale: 1.1 }}>
+          <motion.div whileHover={{ scale: 1.1 }}>
             <Card
               Icon={cardsData[2].icon}
               title={cardsData[2].title}
               description={cardsData[2].description}
             />
           </motion.div>
-          <motion.div className="mt-8" whileHover={{ scale: 1.1 }}>
+          <motion.div whileHover={{ scale: 1.1 }}>
             <Card
               Icon={cardsData[3].icon}
               title={cardsData[3].title}

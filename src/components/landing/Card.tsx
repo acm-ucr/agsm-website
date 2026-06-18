@@ -6,7 +6,7 @@ type CardProps = {
 
 const Card = ({ Icon, title, description }: CardProps) => {
   return (
-    <div className="bg-agsm-yellow-100 flex h-105 w-full flex-col rounded-md p-10 shadow-xl">
+    <div className="bg-agsm-yellow-100 flex w-full flex-col rounded-xl p-10 shadow-xl md:h-105">
       <div>
         {Icon && (
           <Icon className="bg-agsm-blue-100 text-agsm-blue-200 h-18 w-18 rounded-md p-4" />
