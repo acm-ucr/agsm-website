@@ -16,7 +16,7 @@ const AboutUs = () => {
         ABOUT US
       </motion.div>
       <div className="flex flex-col px-8 md:flex-col lg:w-9/10 lg:flex-row lg:gap-x-15 lg:px-0 lg:text-left">
-        <div className=" flex flex-col text-center justify-items-center md:mt-3 md:text-center lg:w-3/5 lg:text-left">
+        <div className="flex flex-col justify-items-center text-center md:mt-3 md:text-center lg:w-3/5 lg:text-left">
           <motion.div
             className="text-agsm-blue-200 text-xl font-bold md:text-2xl lg:text-4xl"
             initial={{ opacity: 0, x: -40 }}
@@ -26,7 +26,7 @@ const AboutUs = () => {
             Launching the Next Generation of Product Leaders
           </motion.div>
           <motion.div
-            className=" w-full text-center md:text-center md:text-lg lg:mt-2 lg:px-0 lg:text-left lg:text-xl"
+            className="w-full text-center md:text-center md:text-lg lg:mt-2 lg:px-0 lg:text-left lg:text-xl"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}

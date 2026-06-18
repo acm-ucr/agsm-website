@@ -51,11 +51,11 @@ const WhatWeOffer = () => {
       variants={cardAnimations}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.1}}
+      viewport={{ once: true, amount: 0.1 }}
     >
-      <div className=" bg-white my-10">
+      <div className="my-10 bg-white">
         <div className="mx-auto max-w-7xl pl-4">
-          <p className="text-agsm-blue-200 mb-5 text-4xl lg:text-5xl font-semibold">
+          <p className="text-agsm-blue-200 mb-5 text-4xl font-semibold lg:text-5xl">
             What We Offer
           </p>
         </div>
@@ -85,7 +85,7 @@ const WhatWeOffer = () => {
           </motion.div>
         </div>
 
-        <div className=" grid grid-cols-1 gap-4 px-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 lg:px-0 lg:pr-24">
+        <div className="grid grid-cols-1 gap-4 px-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-12 lg:px-0 lg:pr-24">
           <motion.div whileHover={{ scale: 1.1 }}>
             <div className="h-105 overflow-hidden rounded-xl lg:-ml-8">
               <Image

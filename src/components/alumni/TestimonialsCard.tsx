@@ -16,7 +16,7 @@ const TestimonialsCard = ({ headshot, name, testimonial }: Props) => {
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="bg-agsm-yellow-100 mx-auto flex max-w-2xl flex-row gap-4 p-6 shadow-xl rounded-xl mb-8"
+        className="bg-agsm-yellow-100 mx-auto mb-8 flex max-w-2xl flex-row gap-4 rounded-xl p-6 shadow-xl"
       >
         <motion.div
           initial={{ x: -100, opacity: 0 }}

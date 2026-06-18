@@ -5,22 +5,22 @@ import { motion } from "motion/react";
 
 const Vision = () => {
   return (
-    <div className="relative flex flex-row h-fit w-full md:my-10 overflow-hidden ">
+    <div className="relative flex h-fit w-full flex-row overflow-hidden md:my-10">
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="hidden md:block md:pl-0 h-fit -z-40"
+        className="-z-40 hidden h-fit md:block md:pl-0"
       >
         <Image
           src={OurVisonImg}
           alt="Vision background"
-          className="pointer-events-none md:left-0 h-fit opacity-50"
+          className="pointer-events-none h-fit opacity-50 md:left-0"
         />
       </motion.div>
 
-      <div className="flex w-screen justify-end text-right p-10">
+      <div className="flex w-screen justify-end p-10 text-right">
         <div className="flex max-w-2xl flex-col items-end text-right">
           <div className="text-agsm-blue-200 text-4xl font-semibold md:text-6xl">
             <motion.div

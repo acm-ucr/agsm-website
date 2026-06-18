@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Landing = () => {
   return (
-    <div className="flex flex-col lg:h-screen relative">
+    <div className="relative flex flex-col lg:h-screen">
       <div className="relative w-screen overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -19,7 +19,7 @@ const Landing = () => {
           <Image
             src={LandingTop}
             alt="Cover Image"
-            className=" max-h-[600px] w-[150%] object-cover object-center"
+            className="max-h-[600px] w-[150%] object-cover object-center"
           />
         </motion.div>
         <motion.div
@@ -50,8 +50,16 @@ const Landing = () => {
           </Link>
         </motion.div>
       </div>
-      <Image src={HeaderBgLeft} alt="" className="absolute left-0 w-50 bottom-0 -z-30 hidden lg:block opacity-50" />
-      <Image src={HeaderBgRight} alt="" className="absolute right-0 w-70 bottom-0 -z-30 hidden lg:block opacity-50" />
+      <Image
+        src={HeaderBgLeft}
+        alt=""
+        className="absolute bottom-0 left-0 -z-30 hidden w-50 opacity-50 lg:block"
+      />
+      <Image
+        src={HeaderBgRight}
+        alt=""
+        className="absolute right-0 bottom-0 -z-30 hidden w-70 opacity-50 lg:block"
+      />
     </div>
   );
 };

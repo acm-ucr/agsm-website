@@ -28,7 +28,7 @@ const UpcomingEvents = () => {
   ];
 
   return (
-    <div className=" flex flex-col items-center gap-8 p-6 select-none">
+    <div className="flex flex-col items-center gap-8 p-6 select-none">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ const UpcomingEvents = () => {
       >
         UPCOMING EVENTS
       </motion.div>
-      <div className=" flex w-full max-w-7xl flex-col justify-center gap-8 md:flex-row">
+      <div className="flex w-full max-w-7xl flex-col justify-center gap-8 md:flex-row">
         {sampleEvents.map((event, index) => (
           <UpcomingEventCard key={index} {...event} />
         ))}

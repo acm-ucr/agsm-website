@@ -119,9 +119,11 @@ const Carousal = () => {
         whileHover={{ scale: 1.1 }}
         viewport={{ once: true }}
       >
-        <Link className="bg-agsm-blue-200 rounded-md px-6 py-2 text-xl text-white"
-              href="https://flickr.com/photos/ucrschoolofbusiness/albums"
-              aria-label="Gallery">
+        <Link
+          className="bg-agsm-blue-200 rounded-md px-6 py-2 text-xl text-white"
+          href="https://flickr.com/photos/ucrschoolofbusiness/albums"
+          aria-label="Gallery"
+        >
           See More
         </Link>
       </motion.div>
